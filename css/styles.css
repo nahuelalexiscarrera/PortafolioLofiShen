@@ -1,0 +1,249 @@
+:root{
+  --text: rgba(255,255,255,.92);
+  --muted: rgba(255,255,255,.72);
+  --stroke: rgba(255,255,255,.16);
+  --glassA: rgba(255,255,255,.10);
+  --glassB: rgba(255,255,255,.05);
+  --shadow: rgba(0,0,0,.35);
+  --accent: rgba(120,180,255,.95);
+  --accent2: rgba(90,220,160,.90);
+  --bg: #0b0f17;
+}
+
+*{ box-sizing: border-box; }
+html, body{ height:100%; }
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* Fondo fijo (tu imagen) */
+.scene{
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    url("../Img/Backgraund_Inicio.png") center / cover no-repeat;
+  transform: scale(1.02);
+}
+
+.scene-vignette{
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(1200px 700px at 50% 30%, rgba(0,0,0,.20), rgba(0,0,0,.72));
+}
+
+/* Scroll inmersivo */
+.scroll{
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+}
+
+.panel{
+  min-height: 100vh;
+  padding: clamp(18px, 4vw, 48px);
+  display: grid;
+  place-items: center;
+  scroll-snap-align: start;
+}
+
+/* Glass UI */
+.glass{
+  background: linear-gradient(180deg, var(--glassA), var(--glassB));
+  border: 1px solid var(--stroke);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 22px;
+  box-shadow: 0 18px 60px var(--shadow);
+}
+
+/* Hero */
+.panel--hero{
+  align-content: center;
+}
+
+.hero-card{
+  width: min(940px, 100%);
+  padding: clamp(18px, 3vw, 30px);
+}
+
+.kicker{
+  margin: 0 0 10px;
+  color: var(--muted);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+h1{
+  margin: 0 0 10px;
+  font-size: clamp(34px, 4vw, 54px);
+  letter-spacing: .2px;
+}
+
+.subtitle{
+  margin: 0 0 18px;
+  color: var(--muted);
+  line-height: 1.5;
+  font-size: clamp(15px, 1.8vw, 18px);
+}
+
+.micro{
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Buttons */
+.cta-row, .contact-row{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 10px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.16);
+  background: rgba(0,0,0,.18);
+  color: var(--text);
+  text-decoration:none;
+  transition: transform .12s ease, border-color .12s ease, background .12s ease;
+}
+
+.btn:hover{
+  transform: translateY(-1px);
+  border-color: rgba(120,180,255,.35);
+}
+
+.btn--primary{
+  background: linear-gradient(90deg, rgba(120,180,255,.28), rgba(90,220,160,.22));
+  border-color: rgba(120,180,255,.35);
+}
+
+/* Section cards */
+.section-card{
+  width: min(940px, 100%);
+  padding: clamp(18px, 3vw, 28px);
+}
+
+h2{
+  margin: 0 0 10px;
+  font-size: clamp(22px, 2.5vw, 28px);
+}
+
+.muted{ color: var(--muted); }
+
+.grid-2{
+  margin-top: 14px;
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 12px;
+}
+
+.mini-card{
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 16px;
+  padding: 14px;
+  background: rgba(0,0,0,.12);
+}
+
+.mini-card h3{
+  margin: 0 0 8px;
+  font-size: 15px;
+}
+
+.mini-card ul{
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+/* Projects */
+.projects-grid{
+  margin-top: 14px;
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 12px;
+}
+
+.project-card{
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 16px;
+  padding: 14px;
+  background: rgba(0,0,0,.12);
+}
+
+.project-card h3{ margin: 0 0 6px; }
+.project-card p{ margin: 0 0 12px; color: var(--muted); }
+
+.project-links{
+  display:flex;
+  gap:10px;
+}
+
+.link{
+  display:inline-flex;
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.14);
+  text-decoration:none;
+  color: var(--text);
+  background: rgba(0,0,0,.16);
+}
+
+.link[aria-disabled="true"]{
+  opacity: .5;
+  pointer-events: none;
+}
+
+/* Scroll hint */
+.hint{
+  margin-top: 18px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color: rgba(255,255,255,.55);
+  font-size: 12px;
+}
+
+.hint__dot{
+  width: 28px;
+  height: 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.18);
+  position: relative;
+  overflow:hidden;
+}
+
+.hint__dot::before{
+  content:"";
+  position:absolute;
+  inset: 1px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(120,180,255,.55), rgba(90,220,160,.45));
+  transform: translateX(-60%);
+  animation: slide 1.3s ease-in-out infinite;
+}
+
+@keyframes slide{
+  0%{ transform: translateX(-65%); opacity:.4; }
+  50%{ transform: translateX(0%); opacity:1; }
+  100%{ transform: translateX(65%); opacity:.4; }
+}
+
+/* Responsive */
+@media (max-width: 720px){
+  .grid-2, .projects-grid{ grid-template-columns: 1fr; }
+}
