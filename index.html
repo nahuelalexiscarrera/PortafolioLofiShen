@@ -1,65 +1,183 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PortaFolioAlexisCarrera</title>
-    <meta name="description" content="Portafolio de Alexis Carrera, desarrollador web.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- TITULO DE LA WEB-->
+  <title>Portafolio</title>
+  
+  <!--CSS-->
+  <link rel="stylesheet" href="./css/style.css">
+  <!--Bootstrap CSS-->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+ <!-- Bootstrap Icons (Para iconos flotantes y UI) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
-    <!--Estilos-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/mdb-ui-kit@9.3.0/css/mdb.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/styles.css">
-    <!--Scrips-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
-        </head>
+</head>
+<body>
+  <header>
+    <!-- NAVBAR -->
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- HERO -->
+  <main>
+    <section id="inicio" class="hero-section">
+  <h1>Welcome</h1>
+  <p>Diseño interfaces con foco en la experiencia del usuario, creando productos digitales que sean intuitivos, accesibles y visualmente atractivos.</p>
+  <a href="#contacto" class="btn">Contáctame</a>
+  <a href="#Roadmap" class="btn">Ver Roadmap</a>
+  <img src="./Img/backgraund_inicio.png" alt="Imagen de portada" class="hero-image">
+</section>
 
-    <body>
-        <div class="scene" aria-hidden="true"></div>
-        <div class="scene-vignette" aria-hidden="true"></div>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid justify-content-center">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav mx-auto">
-        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-        <a class="nav-link" href="#">Sobre mi</a>
-        <a class="nav-link" href="#">Roadmap</a>
-        <a class="nav-link" href="#">Contacto</a>
+    <section id="sobre-mi">
+      <div class="container">
+      <h2 class="section-title">Sobre mí</h2>
+      <p class="section-description">Soy Alexis Carrera, Frontend en formación con mentalidad de producto. Busco que cada sección tenga una intención clara: jerarquía visual, lectura rápida y estilos escalables.
+       Busco crear interfaces limpias, accesibles y rápidas, con foco en la experiencia del usuario.</p>
+       <img src="./Img/retrato.png" alt="Foto de Alexis Carrera" width="720" height="960">
       </div>
-    </div>
-  </div>
-</nav>
-    </body>
-    <!--Scroll container-->
-    <main class="scroll">
-        <!--HERO-->
-        <section class="panel panel--hero" id="top" aria-labelledby="hero-title">
-            <div class="glass hero-card">
-                <h1 id="hero-title">Alexis Carrera</h1>
-                <p class="subtitle">Estudiante Full Stack</p>
-                <div class="cta-row">
-                    <a class="btn btn--primary" href="#roadmap">Ver Roadmap</a>
-                    <a class="btn" href="#proyects">Ver Proyectos</a>
-                </div>
+    </section>
+
+    <section id="Roadmap">
+        <h2>Road Map</h2>
+        <p>Progreso actual en mi aprendizaje:</p>
+        <div class="cards-3">
+          <article class="card glass">
+            <h3>Hoy</h3>
+            <p>Conocimientos basicos en desarollo web.</p>
+            <ul class="roadmap-list">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Testing QA Manual</li>
+            </ul>
+            <!--Entregables-->
+            <div class="entregablesglass">
+              <h4>Entregables para Coder</h4>
+              <div class="entregables-list">
+                <a class="chip" href="https://nahuelalexiscarrera.github.io/entregafinal.carreranahuelalexis/" target="_blank">Entrega final Módulo 1</a>
+                <a class="chip" href="https://drive.google.com/file/d/10rud0YdnpmRIcgZcKETwR6K46hBv3pm9/view?usp=sharing" target="_blank">Testing QA Manual</a>
+              </div>
             </div>
+          </article>
+          <article class="card glass">
+          <h3>En proceso</h3>
+          <p>Interaccion y logica.</p>
+          <ul class="roadmap-list">
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>Manejo de prompt</li>
+          </ul>
+          </article>
+          <article class="card glass">
+            <h3>Proximo</h3>
+            <p>construccion de apps.</p>
+            <ul class="roadmap-list">
+              <li>React</li>
+              <li>Node.js</li>
+              <li>SQL/NoSQL</li>
+            </ul>
+          </article>
+        </div>
+    </section>
+    <section id="contacto">
+  <div class="container">
+    <h2 class="section-title">Contacto</h2>
+    <p class="section-subtitle">Escribime y coordinamos.</p>
 
-        </section>
-        <div class="hint" aria-hidden="true">
-           <span class="hint__dot"></span>
-           </div>
+    <form id="contactForm" class="glass contact-form">
+      <div class="field">
+        <label for="name">Nombre</label>
+        <input id="name" name="name" type="text" autocomplete="name" required />
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required />
+      </div>
+
+      <div class="field">
+        <label for="subject">Asunto</label>
+        <input id="subject" name="subject" type="text" required />
+      </div>
+
+      <div class="field">
+        <label for="message">Mensaje</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+      </div>
+
+      <button class="btn btn-primary" type="submit">Enviar</button>
+      <p id="formNote" class="form-note" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<section class="iconflotantes" aria-label="redes sociales">
+  <a href="https://www.linkedin.com/in/nahuel-alexis-carrera/" target="_blank" rel="noopener noreferrer">
+    <img src="./Img/linkedin_5968991.png" alt="LinkedIn" class="social-icon">
+  </a>
+
+  <a href="https://github.com/NahuelAlexisCarrera" target="_blank" rel="noopener noreferrer">
+    <img src="./Img/github_5968896.png" alt="GitHub" class="social-icon">
+  </a>
+
+  <a href="https://wa.me/5491123456789" target="_blank" rel="noopener noreferrer">
+    <img src="./Img/whatsapp_5969035.png" alt="WhatsApp" class="social-icon">
+  </a>
+</section>
 
 
+<footer>
+  <div class="container">
+    <p>&copy; <span id="year">2026</span> Alexis Carrera — Frontend Portfolio</p>
+  </div>
+</footer>
+</main>
+<!--Scrip automatizador de año footer-->
+<script>
+  const currentYear = new Date().getFullYear();
+  document.getElementById("year").textContent = currentYear;
+</script>
+<!-- JavaScript para manejar el formulario de contacto -->
+  <script>
+  const TO_EMAIL = "nahuel.alexis.carrera@gmail.com";
 
-    
-    
+  document.getElementById("contactForm").addEventListener("submit", (e) => {
+    e.preventDefault();
 
-    </main>
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const subject = document.getElementById("subject").value.trim();
+    const message = document.getElementById("message").value.trim();
 
+    const body =
+`Nombre: ${name}
+Email: ${email}
 
+${message}`;
+
+    const mailto =
+      `mailto:${encodeURIComponent(TO_EMAIL)}` +
+      `?subject=${encodeURIComponent(subject)}` +
+      `&body=${encodeURIComponent(body)}`;
+
+    window.location.href = mailto;
+
+    document.getElementById("formNote").textContent =
+      "Se abrirá tu aplicación de correo para enviar el mensaje.";
+  });
+</script>
+
+  
+  
+  
+</body>
 </html>
